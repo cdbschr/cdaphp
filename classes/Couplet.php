@@ -8,21 +8,21 @@ class Couplet {
   public int $valueMax = 99;
 
   //protege l'input
-  private function protectedInput():string {
+  private function sanitize():string {
     if (isset($_POST['input_value'])) {
       $this->value = htmlspecialchars(trim($_POST['input_value']));
       return $this->value;
     }
   }
   //enlève un pour rentrer dans les conditions d'affichage du couplet
-  private function minusOne($value): int {
+  private function minusOne($value):int {
     return $value - 1;
   }
 
   //affiche le couplet
-  public function launchCouplet() :void {
+  public function launchCouplet():void {
     //applique la protection de l'input
-    $value = $this->protectedInput();
+    $value = $this->sanitize();
 
     //verifie si les valeurs rentrent dans les conditions d'affichage du couplet
     if ($value < $this->valueMin || $value > $this->valueMax) {
