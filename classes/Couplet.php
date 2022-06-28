@@ -8,7 +8,7 @@ class Couplet {
   public int $valueMax = 99;
 
   //protege l'input
-  private function sanitize():string {
+  private function sanitize() {
     if (isset($_POST['input_value'])) {
       $this->value = htmlspecialchars(trim($_POST['input_value']));
       return $this->value;
