@@ -53,10 +53,8 @@ form input {
   font-weight: bolder;
 }
 
-form button {
+form input:last-child {
   margin-left: 5px;
-  padding: 10px;
-  font-size: 1rem;
 }
 
 main > p {
