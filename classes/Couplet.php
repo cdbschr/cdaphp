@@ -26,7 +26,7 @@ class Couplet {
 
     //verifie si les valeurs rentrent dans les conditions d'affichage du couplet
     if ($value < $this->valueMin || $value > $this->valueMax) {
-      echo "Veuillez entrer un nombre entre " . $this->valueMin . " et " . $this->valueMax . ".";
+      echo '<p id="alert"> Veuillez entrer un nombre entre ' . $this->valueMin . ' et ' . $this->valueMax . ' .</p>';
       
       //affiche le couplet avec une valeur d'input 0
     } elseif ($value == $this->valueMin) {
@@ -51,10 +51,10 @@ class Couplet {
       
       //verifie si la valeur est vide
     } elseif(empty($value)) {
-      echo '<p> Veuillez entrer une valeur entre '. $this->valueMin . ' et ' . $this->valueMax . ' </p>';
+       echo '<p id="alert"> Veuillez entrer un nombre entre ' . $this->valueMin . ' et ' . $this->valueMax . ' .</p>';
     
     } else {
-      echo "Veuillez entrer un nombre entre " . $this->valueMin . " et " . $this->valueMax . ".";
+       echo '<p id="alert"> Veuillez entrer un nombre entre ' . $this->valueMin . ' et ' . $this->valueMax . ' .</p>';
     }
   }
 }
